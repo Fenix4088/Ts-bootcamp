@@ -4,6 +4,7 @@
   "description": "",
   "main": "src/index.ts",
   "scripts": {
+    "server": "webpack-dev-server",
     "test": "karma start"
   },
   "keywords": [],

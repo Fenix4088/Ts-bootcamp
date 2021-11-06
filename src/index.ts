@@ -18,8 +18,8 @@ setTimeout(() => {
 }, 5000)
 
 
-type User = { name: string } | { age: number }; // { name: string , age: number }
+// type User = { name: string } | { age: number }; // { name: string , age: number }
 
-const user: User = {
-    name: 'Andrew',
-}
+// const user: User = {
+//     name: 'Andrew',
+// }

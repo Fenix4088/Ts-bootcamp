@@ -1,5 +1,4 @@
 "use strict";
-//@ts-check
 Object.defineProperty(window, 'MySweetApp', { value: 'v1.0.0', writable: true });
 
 function deliveryMethod() {
