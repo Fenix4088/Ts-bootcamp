@@ -5,7 +5,7 @@ interface UserAccount {
     age: number;
 }
 
-let person1: UserAccount = UserAccount;
+let person1: UserAccount;
 
 let userAccount = {
     name: 'Igor',

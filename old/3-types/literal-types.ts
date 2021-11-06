@@ -1,4 +1,4 @@
-// let digit: 0 | 1 | 2 | 3 | 4 = 30;
+  // let digit: 0 | 1 | 2 | 3 | 4 = 30;
 
 // interface AnimationOptions {
 //     delay: number;

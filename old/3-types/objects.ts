@@ -43,3 +43,4 @@ let value: (typeof user)['firstName' | 'age'] = true;
 //
 // user1.age = 33;
 
+let foo = 'str' as const;
