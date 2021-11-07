@@ -39,4 +39,4 @@ function getProperty<Obj, Key extends keyof Obj>(obj: Obj, key: Key) {
 }
 
 const key = 'key1';
-getProperty({a: 1}, 'b')
+getProperty({a: 1}, 'a')
