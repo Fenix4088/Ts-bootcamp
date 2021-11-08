@@ -55,7 +55,11 @@ function nameOrId <T extends number | string>(param: T): NameOrId<T> {
 }
 
 let inv1 = nameOrId('Ihor');
+inv1.name
+inv1.id
 let inv2 = nameOrId(22);
+inv2.name
+inv2.id
 //=================================================================================
 
 

@@ -84,3 +84,26 @@ function performMeterAction({name: action}: { name: MeterActionsType }) {
 
 function componentLookup(_type: Exclude<MeterActionsType, MeterTaskAction>) {
 }
+
+//=================================
+//My examples
+//1 Create getters type
+
+interface IPerson {
+    id: number;
+    name: string;
+    age: number;
+}
+
+type ICreateGetters<T> = {
+    [Key in keyof T as `get${Capitalize<string & Key>}`]: () => T[Key] 
+
+}
+
+let personGetter: ICreateGetters<IPerson> = {
+    getId: () => 1,
+    getName: () => 'name',
+    getAge: () => 33
+    getTest: () => null
+
+}
