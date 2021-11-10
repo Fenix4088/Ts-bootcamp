@@ -107,3 +107,43 @@ let personGetter: ICreateGetters<IPerson> = {
     getTest: () => null
 
 }
+
+//2===============
+
+
+interface ISecondUser {
+    name: string;
+    age: number;
+    info: {
+        mail: boolean;
+        salary: number;
+    }
+}
+
+
+type IExcludeBy<T, E> = {
+    [K in keyof T]: E extends T[K] ? never : K;
+}[keyof T]
+
+const test: IExcludeBy<ISecondUser, string> = 'age';
+
+
+//3===================
+// Here we exclude all E type values from interface
+interface IUser3  {
+    name: string;
+    secondName: string;
+    age: number;
+    isMariied: boolean;
+    houseNumber: number;
+}
+
+type ExcludeType<T, E> = {
+    [K in keyof T as T[K] extends E ? never : K]: T[K] extends E ? never : T[K];
+}
+
+const test3: ExcludeType<IUser3, string> = {
+    age: 22,
+    houseNumber: 33,
+    isMariied: false
+}

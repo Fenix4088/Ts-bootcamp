@@ -74,3 +74,21 @@ average(1, 2, 3, 45, 34, 44, 4, 4, 4);
 const n: number = average(1, 2, 3);
 
 let arr: Array
+
+//=======================================My examples
+interface IFish {
+    swim: () => void;
+}
+interface IBird {
+    fly: () => void;
+}  
+
+function move(animal: IFish | IBird) {
+    if('swim' in animal) {
+        return animal.swim()
+    }
+
+    return animal.fly();
+
+}
+
