@@ -38,3 +38,47 @@ class Point extends BasePoint {
         super.onInit();
     }
 }
+
+
+// ===============================================
+
+class Animal {
+    private type: string;
+    private name: string;
+    private age!: number;
+    private yearBirh: number;
+
+
+    constructor(type: string, name: string, yearBirh: number) {
+        this.type = type;
+        this.name = name;
+        this.yearBirh = yearBirh;
+    }
+
+    public nameGetter() {
+        console.log(this.name);
+        return;
+    }
+
+    public get getAnimalInfo() {
+        return `
+            type: ${this.type},
+            name: ${this.name}
+        `
+    }
+
+    public get getAge() {
+        return this.calcAge(this.yearBirh);
+    }
+
+    private calcAge(birth: number) {
+        this.age = new Date().getFullYear() - birth;
+        return this.age;
+    }
+}
+
+const rabbit = new Animal('rabbit', 'Banny', 1995);
+
+console.log(rabbit.nameGetter());
+console.log(rabbit.getAnimalInfo);
+console.log(rabbit.getAge);
